@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        DEPLOY_to = 'develops'
+        DEPLOY_to = 'develop'
     }
     stages{
         
@@ -19,7 +19,7 @@ pipeline{
        
         stage ('testing all off condition') {
             when {
-                allOf { //both condition should match 
+                anyOf { //any of the below condition can be satisfied 
                    branch 'develop' 
                    environment name :'DEPLOY_to', value : 'develop'
                 } 
