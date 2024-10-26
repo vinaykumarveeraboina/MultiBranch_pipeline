@@ -20,8 +20,8 @@ pipeline{
         stage ('testing all off condition') {
             when {
                 allOf { //both condition should match 
-                    BRANCH_NAME == "develop" 
-                   environment name :'DEPLOY_to' , value : 'develop'
+                   branch 'develop' 
+                   environment name :'DEPLOY_to', value : 'develop'
                 } 
                 }
              steps{
