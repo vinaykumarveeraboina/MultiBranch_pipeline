@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        DEPLOY_to = 'develop'
+        DEPLOY_to = 'develops'
     }
     stages{
         
