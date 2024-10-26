@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         
-        stage (deploy to dev){  //we are saying excute this job only in develop (job)
+        stage ('deploy to dev'){  //we are saying excute this job only in develop (job)
             when {
                 expression {
                     BRANCH_NAME ==~ / (develop)  / 
