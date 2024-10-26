@@ -5,7 +5,7 @@ pipeline{
         stage ('deploy to dev'){  //we are saying excute this job only in develop (job)
             when {
                 expression {
-                    BRANCH_NAME ==~ / (develop)  / 
+                    BRANCH_NAME == "develop" 
                 }
               }  
               steps{
