@@ -2,7 +2,6 @@ pipeline{
     agent any
     
     stages{
-        
         stage ('deploy to stage'){  /*If we want to execute the stage env , when branch is with release*/
             when {
                     branch 'release-*' 
@@ -12,7 +11,6 @@ pipeline{
                 echo "deploying to stage env "
             }
           
-    }
         stage ('deploy to Prod'){  /*this stage shoudl execute with tags only */
            //v1.2.3 --it will deploy 
            //v.1.2.3 --it wont deply
@@ -24,6 +22,6 @@ pipeline{
             steps{
                 echo "deploying to prod env "
             }
-          
+        }    
     }  
  }
