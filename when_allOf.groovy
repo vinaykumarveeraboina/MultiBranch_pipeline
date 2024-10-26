@@ -21,7 +21,7 @@ pipeline{
             when {
                 allOf { //both condition should match 
                     BRANCH_NAME == "develop" 
-                   environment name :'DEPLOY_to' value : 'develop'
+                   environment name :'DEPLOY_to', value : 'develop'
                 } 
                 }
              steps{
